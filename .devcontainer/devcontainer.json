@@ -1,0 +1,23 @@
+{
+  "name": "OCaml Development Environment",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ocamllabs.ocaml-platform"
+      ],
+      "settings": {
+        "ocaml.sandbox": {
+          "kind": "opam",
+          "switch": "5.3"
+        }
+      }
+    }
+  },
+  "remoteUser": "opam",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace"
+} 
