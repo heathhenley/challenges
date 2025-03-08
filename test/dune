@@ -1,2 +1,2 @@
 (test
- (name test_challenges))
+ (name test_challenge_api))

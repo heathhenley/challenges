@@ -1,6 +1,6 @@
-(lang dune 3.17)
+(lang dune 3.18)
 
-(name challenges)
+(name challenge-api)
 
 (generate_opam_files true)
 
@@ -16,11 +16,9 @@
 (documentation https://url/to/documentation)
 
 (package
- (name challenges)
+ (name challenge-api)
  (synopsis "A short synopsis")
  (description "A longer description")
  (depends ocaml)
  (tags
   ("add topics" "to describe" your project)))
-
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

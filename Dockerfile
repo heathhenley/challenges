@@ -1,25 +1,22 @@
 # Install the latest ocaml and opam image
-FROM ocaml/opam:debian-ocaml-5.3
+FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y \
-    git \
-    curl \
     build-essential \
-    pkg-config \
-    libev-dev \
-    libevent-dev
+    curl \
+    gcc \
+    git \
+    sudo
+
+RUN useradd -m -s /bin/bash user
+USER user
 
 # Install dune using the installer script
-USER opam
-RUN opam install ocaml-lsp-server odoc ocamlformat utop
+RUN curl -fsSL https://get.dune.build/install | sh -
 
-ENV PATH="/home/opam/.local/bin:${PATH}"
+ENV PATH="/home/user/.local/bin:${PATH}"
 
 # Set up a working directory
-WORKDIR /challenges
+WORKDIR /workspace
 
-# install the project dependencies
-RUN opam install . --deps-only --working-dir
-
-# Set the entrypoint to bash
-ENTRYPOINT ["/bin/bash"] 
+SHELL ["/bin/bash", "-l", "-c"]

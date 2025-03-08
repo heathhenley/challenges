@@ -6,18 +6,15 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ocamllabs.ocaml-platform"
-      ],
       "settings": {
         "ocaml.sandbox": {
-          "kind": "opam",
-          "switch": "5.3"
+          "kind": "custom",
+          "template": "$prog $args"
         }
       }
     }
   },
-  "remoteUser": "opam",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "workspaceFolder": "/workspace"
+  "workspaceFolder": "/workspace",
+  "remoteUser": "user"
 } 
