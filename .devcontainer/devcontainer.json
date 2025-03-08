@@ -16,5 +16,8 @@
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
-  "remoteUser": "user"
-} 
+  "remoteUser": "user",
+  "mounts": [
+      "source=${localWorkspaceFolder}/.cache,target=/home/user/.cache,type=bind,consistency=cached"
+  ]
+}

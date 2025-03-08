@@ -4,3 +4,4 @@ _tests
 _tests_opam
 _tests_opam_opam
 _tests_opam_opam_opam
+.cache
