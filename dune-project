@@ -5,15 +5,13 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github heathhenley/challenges))
 
-(authors "Author Name <author@example.com>")
+(authors "Heath Henley <heath.j.henley@gmail.com>")
 
-(maintainers "Maintainer Name <maintainer@example.com>")
+(maintainers "Heath Henley <heath.j.henley@gmail.com>")
 
 (license LICENSE)
-
-(documentation https://url/to/documentation)
 
 (package
  (name challenge-api)
