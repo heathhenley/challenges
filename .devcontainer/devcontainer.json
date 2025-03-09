@@ -8,16 +8,19 @@
     "vscode": {
       "settings": {
         "ocaml.sandbox": {
-          "kind": "custom",
-          "template": "$prog $args"
+          "kind": "opam",
+          "switch": "5.3"
         }
-      }
+      },
+      "extensions": [
+        "ocaml-lsp.ocaml-lsp-server",
+        "vscode-ocaml-platform.ocaml-platform",
+        "vscode-ocaml-platform.ocaml-platform-vscode"
+     ]
     }
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
-  "remoteUser": "user",
-  "mounts": [
-      "source=${localWorkspaceFolder}/.cache,target=/home/user/.cache,type=bind,consistency=cached"
-  ]
+  "remoteUser": "opam",
+  "forwardPorts": [8080]
 }

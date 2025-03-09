@@ -2,15 +2,17 @@
 opam-version: "2.0"
 synopsis: "A short synopsis"
 description: "A longer description"
-maintainer: ["Heath Henley <heath.j.henley@gmail.com>"]
-authors: ["Heath Henley <heath.j.henley@gmail.com>"]
+maintainer: ["Maintainer Name <maintainer@example.com>"]
+authors: ["Author Name <author@example.com>"]
 license: "LICENSE"
 tags: ["add topics" "to describe" "your" "project"]
-homepage: "https://github.com/heathhenley/challenges"
-bug-reports: "https://github.com/heathhenley/challenges/issues"
+homepage: "https://github.com/username/reponame"
+doc: "https://url/to/documentation"
+bug-reports: "https://github.com/username/reponame/issues"
 depends: [
-  "dune" {>= "3.18"}
+  "dune" {>= "3.17"}
   "ocaml"
+  "dream"
   "odoc" {with-doc}
 ]
 build: [
@@ -27,5 +29,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/heathhenley/challenges.git"
-x-maintenance-intent: ["(latest)"]
+dev-repo: "git+https://github.com/username/reponame.git"

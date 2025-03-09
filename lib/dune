@@ -1,2 +1,3 @@
 (library
- (name challenge_api))
+ (name api)
+ (libraries dream))

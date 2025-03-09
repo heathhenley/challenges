@@ -1,4 +1,4 @@
 (executable
- (public_name challenge-api)
+ (public_name api)
  (name main)
- (libraries challenge_api))
+ (libraries api))
