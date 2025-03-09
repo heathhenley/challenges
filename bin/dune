@@ -1,4 +1,5 @@
 (executable
  (public_name api)
  (name main)
- (libraries api))
+ (libraries dream api)
+ (preprocess (pps lwt_ppx ppx_yojson_conv)))

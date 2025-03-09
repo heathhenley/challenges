@@ -16,7 +16,7 @@ clean:
 
 .PHONY: deps
 deps:
-	opam install . --deps-only --with-test
+	opam install . --deps-only --with-test -y
 
 .PHONY: doc
 doc:

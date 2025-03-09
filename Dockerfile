@@ -5,7 +5,8 @@ RUN sudo apt-get update && sudo apt-get install -y \
   libev-dev \
   pkg-config \
   libgmp-dev \
-  libssl-dev
+  libssl-dev \
+  jq
 
 # Set up a working directory
 WORKDIR /workspace
